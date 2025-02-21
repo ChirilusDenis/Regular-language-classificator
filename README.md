@@ -17,6 +17,6 @@ Each state is defined by:
 
 For each word in the accepted or rejected lists, a new chain is created in the graph, each transition in the chain is determined by the next unconsumed letter from the word. All chains start from the start state and end at either one the error or accept state, depending on the list the word was taken from. Chains can share prefixes, to minimize the number of states.
 
-After the construction, the graph is simplified. This is done by removing all states where all neighbours end at one of the 2 final states: error or accept.
+After construction, the graph is simplified. This is done by removing all states where all neighbours lead to one of the 2 final states.
 
 At the end, each states gets an ID and the graph is returned as an adjacency matrix.
